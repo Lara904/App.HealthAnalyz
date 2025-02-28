@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="HealthAnalyz.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:HealthAnalyz"
+    xmlns:pages="clr-namespace:HealthAnalyz.Pages"
+    xmlns:modules="clr-namespace:HealthAnalyz.Pages.Modules"
+    Shell.FlyoutBehavior="Flyout"
+    Title="HealthAnalyz">
+
+    <!-- Page Accueil (Home) -->
+    <ShellItem Title="Accueil">
+        <ShellContent 
+            Title="Accueil" 
+            ContentTemplate="{DataTemplate pages:AccueilPage}" 
+            Route="AccueilPage" />
+    </ShellItem>
+
+    <!-- Page Santé regroupant les différents modules de saisie -->
+    <ShellItem Title="Santé">
+        <ShellContent 
+            Title="Santé" 
+            ContentTemplate="{DataTemplate pages:SantePage}" 
+            Route="SantePage" />
+    </ShellItem>
+
+    <!-- Page Analyse pour la vue globale et les statistiques -->
+    <ShellItem Title="Analyse">
+        <ShellContent 
+            Title="Analyse" 
+            ContentTemplate="{DataTemplate pages:AnalysePage}" 
+            Route="AnalysePage" />
+    </ShellItem>
+
+    <!-- Section Modules spécifiques -->
+    <ShellItem Title="Modules">
+        <!-- Module Sophrologie : suivi des séances et historique -->
+        <ShellContent 
+            Title="Sophrologie" 
+            ContentTemplate="{DataTemplate modules:SophrologiePage}" 
+            Route="SophrologiePage" />
+        <!-- Module Humeur : saisie et historique de l’humeur journalière -->
+        <ShellContent 
+            Title="Humeur" 
+            ContentTemplate="{DataTemplate modules:HumeurPage}" 
+            Route="HumeurPage" />
+        <!-- Module To Do List : gestion des tâches quotidiennes -->
+        <ShellContent 
+            Title="To Do List" 
+            ContentTemplate="{DataTemplate modules:ToDoListPage}" 
+            Route="ToDoListPage" />
+        <!-- Module Track List : suivi des habitudes (sport, code, écriture, sophro) -->
+        <ShellContent 
+            Title="Track List" 
+            ContentTemplate="{DataTemplate modules:TrackListPage}" 
+            Route="TrackListPage" />
+        <!-- Module Track Sommeil : saisie et analyse du sommeil -->
+        <ShellContent 
+            Title="Sommeil" 
+            ContentTemplate="{DataTemplate modules:TrackSommeilPage}" 
+            Route="TrackSommeilPage" />
+        <!-- Module Cycle Menstruel : calendrier interactif et gestion des phases -->
+        <ShellContent 
+            Title="Cycle Menstruel" 
+            ContentTemplate="{DataTemplate modules:CycleMenstruelPage}" 
+            Route="CycleMenstruelPage" />
+    </ShellItem>
+
+</Shell>
